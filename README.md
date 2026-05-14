@@ -184,7 +184,7 @@ int main(int argc, char **argv)
     CHECK(cudaSetDevice(dev));
 
     // set up data size of vectors
-    int nElem = 1 << 24;
+    int nElem = 1000;
     printf("Vector size %d\n", nElem);
 
     // malloc host memory
@@ -451,7 +451,7 @@ int main(int argc, char **argv)
     CHECK(cudaMemcpy(d_C, gpuRef, nBytes, cudaMemcpyHostToDevice));
 
     // invoke kernel at host side
-    int iLen = 512;
+    int iLen = 1024;
     dim3 block (iLen);
     dim3 grid  ((nElem + block.x - 1) / block.x);
 
@@ -636,7 +636,7 @@ int main(int argc, char **argv)
     CHECK(cudaSetDevice(dev));
 
     // set up data size of vectors
-    int nElem = 1023;
+    int nElem = 1000;
     printf("Vector size %d\n", nElem);
 
     // malloc host memory
@@ -677,7 +677,7 @@ int main(int argc, char **argv)
     CHECK(cudaMemcpy(d_C, gpuRef, nBytes, cudaMemcpyHostToDevice));
 
     // invoke kernel at host side
-    int iLen = 256;
+    int iLen = 1023;
     dim3 block (iLen);
     dim3 grid  ((nElem + block.x - 1) / block.x);
 
@@ -862,7 +862,7 @@ int main(int argc, char **argv)
     CHECK(cudaSetDevice(dev));
 
     // set up data size of vectors
-    int nElem = 1024;
+    int nElem = 1000;
     printf("Vector size %d\n", nElem);
 
     // malloc host memory
@@ -939,21 +939,21 @@ int main(int argc, char **argv)
 ```
 ## OUTPUT:
 
-**1<<24:**
+**Threads 512:**
 
-<img width="678" height="147" alt="image" src="https://github.com/user-attachments/assets/cb3ce034-f525-4ccd-a23e-bbf565a0d119" />
+<img width="742" height="170" alt="image" src="https://github.com/user-attachments/assets/990255fa-a802-48b0-bf61-17a9f0126913" />
 
-**1000:**
+**Threads 1024:**
 
-<img width="681" height="137" alt="image" src="https://github.com/user-attachments/assets/753dbcdd-5bc7-4ea1-89d1-d4f418d27e4f" />
+<img width="735" height="147" alt="image" src="https://github.com/user-attachments/assets/359483b6-8342-44e5-8562-de5c49eedf45" />
 
-**1023:**
+**Threads 1023:**
 
-<img width="717" height="136" alt="image" src="https://github.com/user-attachments/assets/70c640e5-d3aa-40be-887e-625ecc9cac66" />
+<img width="893" height="166" alt="image" src="https://github.com/user-attachments/assets/cf3265f9-e50e-4108-a91a-7d425fe5aad1" />
 
-**1024:**
+**Threads 256:**
 
-<img width="668" height="136" alt="image" src="https://github.com/user-attachments/assets/267cf9fc-8580-437c-94a9-b755eb7195e1" />
+<img width="750" height="162" alt="image" src="https://github.com/user-attachments/assets/7ea15aef-5df2-4189-9435-1fafec84dc57" />
 
 ## RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
