@@ -939,16 +939,21 @@ int main(int argc, char **argv)
 ```
 ## OUTPUT:
 
-<img width="1920" height="1200" alt="Screenshot (274)" src="https://github.com/user-attachments/assets/2908dcea-7152-4fd5-96c0-3391e93ec7d0" />
+**1<<24:**
 
+<img width="678" height="147" alt="image" src="https://github.com/user-attachments/assets/cb3ce034-f525-4ccd-a23e-bbf565a0d119" />
 
-<img width="1920" height="1200" alt="Screenshot (275)" src="https://github.com/user-attachments/assets/210d5276-cfdf-47b2-a92f-36785d026365" />
+**1000:**
 
+<img width="681" height="137" alt="image" src="https://github.com/user-attachments/assets/753dbcdd-5bc7-4ea1-89d1-d4f418d27e4f" />
 
-<img width="1920" height="1200" alt="Screenshot (276)" src="https://github.com/user-attachments/assets/3e5a5b38-3b42-4ca7-a5bc-8df6170d1d8a" />
+**1023:**
 
+<img width="717" height="136" alt="image" src="https://github.com/user-attachments/assets/70c640e5-d3aa-40be-887e-625ecc9cac66" />
 
-<img width="1920" height="1200" alt="Screenshot (277)" src="https://github.com/user-attachments/assets/6ce2c66e-75e4-4d93-8348-0378cd019f1e" />
+**1024:**
+
+<img width="668" height="136" alt="image" src="https://github.com/user-attachments/assets/267cf9fc-8580-437c-94a9-b755eb7195e1" />
 
 ## RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
